@@ -4,7 +4,7 @@
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 7.72232
-height = 11.7811
+height = 6.16547
 
 [node name="Bush" type="StaticBody2D"]
 
