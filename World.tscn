@@ -9,6 +9,7 @@ radius = 4.0
 height = 4.0
 
 [node name="World" type="Node2D"]
+position = Vector2( 0, 1 )
 
 [node name="Bush" type="Sprite" parent="."]
 position = Vector2( 26.1088, 22.2571 )
@@ -34,4 +35,4 @@ shape = SubResource( 1 )
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
-polygon = PoolVector2Array( -1, -1, 2, 179, 320, 179, 319, 1, 327, 188, -8, 184, -5, -9, 318, 0 )
+polygon = PoolVector2Array( 0, -1, 32, 23, 16, 71, 80, 95, 40, 135, 96, 143, 112, 119, 192, 159, 216, 127, 248, 151, 280, 119, 248, 103, 288, 71, 256, 39, 272, 23, 224, 7, 232, -1, 320, -1, 320, 175, 0, 175 )
