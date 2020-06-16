@@ -1,11 +1,14 @@
 extends KinematicBody2D
 
-var velocity = Vector2.ZERO
 const ACCELERATION = 500
 const MAX_SPEED = 80
 const FRICTION = 500
-func _ready():
-	print("Hello world")
+
+var velocity = Vector2.ZERO
+
+onready var animationPlayer = $AnimationPlayer
+
+	
 	
 func _physics_process(delta):
 	var input_vector = Vector2.ZERO
@@ -14,8 +17,12 @@ func _physics_process(delta):
 	input_vector = input_vector.normalized()
 	
 	if input_vector != Vector2.ZERO:
+		animationPlayer.play("RunRight")
+		
 		velocity = velocity.move_toward(input_vector * MAX_SPEED, ACCELERATION * delta)
 	else:
+		animationPlayer.play("IdleRight")
+		
 		velocity = velocity.move_toward( Vector2.ZERO, FRICTION * delta)
 	
 	velocity = move_and_slide(velocity)
