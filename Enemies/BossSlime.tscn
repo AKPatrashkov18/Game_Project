@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://Enemies/BossSlime.png" type="Texture" id=1]
 [ext_resource path="res://Hitboxes and Hurtboxes/Hurtbox.tscn" type="PackedScene" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://Hitboxes and Hurtboxes/Hitbox.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Stats.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Enemies/PlayerDetectionZone.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Shadows/LargeShadow.png" type="Texture" id=7]
 
 [sub_resource type="AtlasTexture" id=1]
 atlas = ExtResource( 1 )
@@ -53,8 +54,13 @@ position = Vector2( 1.90735e-06, -32.75 )
 scale = Vector2( 2.9375, 2.6875 )
 frames = SubResource( 5 )
 animation = "Animate"
-frame = 3
 playing = true
+
+[node name="ShadowSprite" type="Sprite" parent="."]
+show_behind_parent = true
+position = Vector2( 0, -12 )
+scale = Vector2( 1.2, 1 )
+texture = ExtResource( 7 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 0, -18 )
