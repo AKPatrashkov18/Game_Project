@@ -1,7 +1,13 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://GameMenu/WinScreen.gd" type="Script" id=1]
 [ext_resource path="res://Music and Sounds/Menu Select.wav" type="AudioStream" id=2]
+[ext_resource path="res://GameMenu/Button.png" type="Texture" id=3]
+[ext_resource path="res://World/GrassBackground.png" type="Texture" id=4]
+[ext_resource path="res://GameMenu/Trophy.png" type="Texture" id=5]
+[ext_resource path="res://GameMenu/Restart.png" type="Texture" id=6]
+[ext_resource path="res://GameMenu/Exit.png" type="Texture" id=7]
+[ext_resource path="res://GameMenu/You Win.png" type="Texture" id=8]
 
 [node name="WinScreen" type="CanvasLayer"]
 
@@ -15,13 +21,25 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="ColorRect" type="ColorRect" parent="WinScreen"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-color = Color( 0.882353, 0.905882, 0.164706, 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
+[node name="Sprite" type="Sprite" parent="WinScreen"]
+position = Vector2( 161.518, 82.7433 )
+scale = Vector2( 6.04744, 3.58573 )
+texture = ExtResource( 4 )
+
+[node name="Trophy" type="Sprite" parent="WinScreen"]
+position = Vector2( 48, 88 )
+scale = Vector2( 3.14576, 3.20652 )
+texture = ExtResource( 5 )
+
+[node name="Trophy2" type="Sprite" parent="WinScreen"]
+position = Vector2( 272, 88 )
+scale = Vector2( 3.14576, 3.20652 )
+texture = ExtResource( 5 )
+
+[node name="YouWin" type="Sprite" parent="WinScreen"]
+position = Vector2( 156.493, 44.302 )
+scale = Vector2( 1.53949, 1.8053 )
+texture = ExtResource( 8 )
 
 [node name="CenterContainer" type="CenterContainer" parent="WinScreen"]
 anchor_right = 1.0
@@ -40,6 +58,7 @@ margin_bottom = 121.0
 margin_right = 57.0
 margin_bottom = 14.0
 text = "You win!"
+percent_visible = 0.0
 
 [node name="RestartButton" type="Button" parent="WinScreen/CenterContainer/VBoxContainer"]
 margin_top = 18.0
@@ -55,5 +74,25 @@ text = "Exit"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="WinScreen/CenterContainer/VBoxContainer"]
 stream = ExtResource( 2 )
+
+[node name="Button2" type="Sprite" parent="WinScreen/CenterContainer"]
+position = Vector2( 160.167, 85.9977 )
+scale = Vector2( 0.509844, 0.539796 )
+texture = ExtResource( 3 )
+
+[node name="Sprite" type="Sprite" parent="WinScreen/CenterContainer/Button2"]
+position = Vector2( -0.327255, -0.66214 )
+scale = Vector2( 1.0629, 1.12996 )
+texture = ExtResource( 6 )
+
+[node name="Button" type="Sprite" parent="WinScreen/CenterContainer"]
+position = Vector2( 160, 110.999 )
+scale = Vector2( 0.504222, 0.532251 )
+texture = ExtResource( 3 )
+
+[node name="Sprite" type="Sprite" parent="WinScreen/CenterContainer/Button"]
+position = Vector2( 0, -0.937294 )
+scale = Vector2( 1.17997, 1.34557 )
+texture = ExtResource( 7 )
 [connection signal="pressed" from="WinScreen/CenterContainer/VBoxContainer/RestartButton" to="WinScreen" method="_on_RestartButton_pressed"]
 [connection signal="pressed" from="WinScreen/CenterContainer/VBoxContainer/QuitButton" to="WinScreen" method="_on_QuitButton_pressed"]

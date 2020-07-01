@@ -1,7 +1,11 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://GameMenu/Pause.gd" type="Script" id=1]
 [ext_resource path="res://Music and Sounds/Menu Select.wav" type="AudioStream" id=2]
+[ext_resource path="res://GameMenu/Button.png" type="Texture" id=3]
+[ext_resource path="res://GameMenu/Restart.png" type="Texture" id=4]
+[ext_resource path="res://GameMenu/Exit.png" type="Texture" id=5]
+[ext_resource path="res://GameMenu/Continue.png" type="Texture" id=6]
 
 [node name="Pause" type="CanvasLayer"]
 
@@ -52,6 +56,34 @@ text = "Exit"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Pause/CenterContainer/VBoxContainer"]
 stream = ExtResource( 2 )
+
+[node name="Button" type="Sprite" parent="Pause/CenterContainer"]
+position = Vector2( 160, 64 )
+scale = Vector2( 0.602701, 0.609323 )
+texture = ExtResource( 3 )
+
+[node name="Sprite" type="Sprite" parent="Pause/CenterContainer/Button"]
+texture = ExtResource( 6 )
+
+[node name="Button3" type="Sprite" parent="Pause/CenterContainer"]
+position = Vector2( 160, 88 )
+scale = Vector2( 0.602701, 0.609323 )
+texture = ExtResource( 3 )
+
+[node name="Sprite" type="Sprite" parent="Pause/CenterContainer/Button3"]
+position = Vector2( -3.05176e-05, 0 )
+scale = Vector2( 1.06887, 1.15647 )
+texture = ExtResource( 4 )
+
+[node name="Button2" type="Sprite" parent="Pause/CenterContainer"]
+position = Vector2( 160, 112 )
+scale = Vector2( 0.602701, 0.609323 )
+texture = ExtResource( 3 )
+
+[node name="Sprite" type="Sprite" parent="Pause/CenterContainer/Button2"]
+position = Vector2( -4.57764e-05, 1.52588e-05 )
+scale = Vector2( 1.06887, 1.15647 )
+texture = ExtResource( 5 )
 [connection signal="pressed" from="Pause/CenterContainer/VBoxContainer/ContinueGameButton" to="Pause" method="_on_ContinueGameButton_pressed"]
 [connection signal="pressed" from="Pause/CenterContainer/VBoxContainer/ReturnButton" to="Pause" method="_on_ReturnButton_pressed"]
 [connection signal="pressed" from="Pause/CenterContainer/VBoxContainer/QuitGameButton" to="Pause" method="_on_QuitGameButton_pressed"]

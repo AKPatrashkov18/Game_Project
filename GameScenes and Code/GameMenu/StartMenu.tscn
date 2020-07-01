@@ -1,7 +1,12 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://GameMenu/StartMenu.gd" type="Script" id=1]
 [ext_resource path="res://Music and Sounds/Menu Select.wav" type="AudioStream" id=2]
+[ext_resource path="res://GameMenu/Button.png" type="Texture" id=3]
+[ext_resource path="res://World/GrassBackground.png" type="Texture" id=4]
+[ext_resource path="res://GameMenu/Play.png" type="Texture" id=5]
+[ext_resource path="res://GameMenu/Exit.png" type="Texture" id=6]
+[ext_resource path="res://GameMenu/lOGO.png" type="Texture" id=7]
 
 [node name="StartMenu" type="Control"]
 anchor_right = 1.0
@@ -11,9 +16,21 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 159.849, 89.5163 )
+scale = Vector2( 5.22597, 2.93042 )
+texture = ExtResource( 4 )
+
+[node name="Logo" type="Sprite" parent="."]
+position = Vector2( 180.956, 62.2086 )
+scale = Vector2( 1.96331, 2.40954 )
+texture = ExtResource( 7 )
+
 [node name="CenterContainer" type="CenterContainer" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
+margin_left = 0.222733
+margin_right = 0.222717
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -31,17 +48,38 @@ stream = ExtResource( 2 )
 margin_right = 70.0
 margin_bottom = 14.0
 text = "Fox Master"
+percent_visible = 0.0
 
 [node name="StartGameButton" type="Button" parent="CenterContainer/VBoxContainer"]
 margin_top = 18.0
 margin_right = 70.0
 margin_bottom = 38.0
-text = "Start"
+text = "Play"
 
 [node name="QuitGameButton" type="Button" parent="CenterContainer/VBoxContainer"]
 margin_top = 42.0
 margin_right = 70.0
 margin_bottom = 62.0
 text = "Exit"
+
+[node name="Button" type="Sprite" parent="CenterContainer"]
+position = Vector2( 160, 85.9955 )
+scale = Vector2( 0.624133, 0.53926 )
+texture = ExtResource( 3 )
+
+[node name="Sprite" type="Sprite" parent="CenterContainer/Button"]
+position = Vector2( -2.83234, -1.47517 )
+scale = Vector2( 1.57456, 1.50811 )
+texture = ExtResource( 5 )
+
+[node name="Button2" type="Sprite" parent="CenterContainer"]
+position = Vector2( 160, 109.604 )
+scale = Vector2( 0.624133, 0.53926 )
+texture = ExtResource( 3 )
+
+[node name="Sprite" type="Sprite" parent="CenterContainer/Button2"]
+position = Vector2( -1.98265, -0.32782 )
+scale = Vector2( 1.28324, 1.55728 )
+texture = ExtResource( 6 )
 [connection signal="pressed" from="CenterContainer/VBoxContainer/StartGameButton" to="." method="_on_StartGameButton_pressed"]
 [connection signal="pressed" from="CenterContainer/VBoxContainer/QuitGameButton" to="." method="_on_QuitGameButton_pressed"]
