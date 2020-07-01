@@ -22,8 +22,8 @@ scale = Vector2( 5.22597, 2.93042 )
 texture = ExtResource( 4 )
 
 [node name="Logo" type="Sprite" parent="."]
-position = Vector2( 180.956, 62.2086 )
-scale = Vector2( 1.96331, 2.40954 )
+position = Vector2( 160.883, 35.6924 )
+scale = Vector2( 0.518522, 0.869004 )
 texture = ExtResource( 7 )
 
 [node name="CenterContainer" type="CenterContainer" parent="."]
@@ -36,9 +36,9 @@ __meta__ = {
 }
 
 [node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
-margin_left = 125.0
+margin_left = 124.0
 margin_top = 59.0
-margin_right = 195.0
+margin_right = 194.0
 margin_bottom = 121.0
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="CenterContainer/VBoxContainer"]

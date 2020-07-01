@@ -17,7 +17,7 @@ _global_script_class_icons={
 
 config/name="Project2D"
 run/main_scene="res://GameMenu/StartMenu.tscn"
-config/icon="res://icon.png"
+config/icon="res://GameMenu/FoxIcon.png"
 
 [autoload]
 
