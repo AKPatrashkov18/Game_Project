@@ -52,6 +52,8 @@ func _on_Hurtbox_area_entered(area):
 	stats.health -= area.damage
 	knockback = area.knockback_vector * 120
 	hurtbox.create_hit_effect()
+	if stats.health == 0:
+		get_parent().get_node("WinScreen/WinScreen").visible = true
 
 func _on_Stats_no_health():
 	queue_free()

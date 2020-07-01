@@ -1,0 +1,55 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://GameMenu/WinScreen.gd" type="Script" id=1]
+
+[node name="WinScreen" type="CanvasLayer"]
+
+[node name="WinScreen" type="Control" parent="."]
+pause_mode = 2
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="WinScreen"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.882353, 0.905882, 0.164706, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CenterContainer" type="CenterContainer" parent="WinScreen"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="WinScreen/CenterContainer"]
+margin_left = 131.0
+margin_top = 59.0
+margin_right = 188.0
+margin_bottom = 121.0
+
+[node name="Label" type="Label" parent="WinScreen/CenterContainer/VBoxContainer"]
+margin_right = 57.0
+margin_bottom = 14.0
+text = "You win!"
+
+[node name="RestartButton" type="Button" parent="WinScreen/CenterContainer/VBoxContainer"]
+margin_top = 18.0
+margin_right = 57.0
+margin_bottom = 38.0
+text = "Restart"
+
+[node name="QuitButton" type="Button" parent="WinScreen/CenterContainer/VBoxContainer"]
+margin_top = 42.0
+margin_right = 57.0
+margin_bottom = 62.0
+text = "Exit"
+[connection signal="pressed" from="WinScreen/CenterContainer/VBoxContainer/RestartButton" to="WinScreen" method="_on_RestartButton_pressed"]
+[connection signal="pressed" from="WinScreen/CenterContainer/VBoxContainer/QuitButton" to="WinScreen" method="_on_QuitButton_pressed"]
