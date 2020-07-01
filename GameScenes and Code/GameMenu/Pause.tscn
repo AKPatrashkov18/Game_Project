@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://GameMenu/Pause.gd" type="Script" id=1]
+[ext_resource path="res://Music and Sounds/Menu Select.wav" type="AudioStream" id=2]
 
 [node name="Pause" type="CanvasLayer"]
 
@@ -40,7 +41,7 @@ text = "Continue"
 margin_top = 24.0
 margin_right = 69.0
 margin_bottom = 44.0
-text = "Try again"
+text = "Restart"
 
 [node name="QuitGameButton" type="Button" parent="Pause/CenterContainer/VBoxContainer"]
 pause_mode = 2
@@ -48,6 +49,9 @@ margin_top = 48.0
 margin_right = 69.0
 margin_bottom = 68.0
 text = "Exit"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Pause/CenterContainer/VBoxContainer"]
+stream = ExtResource( 2 )
 [connection signal="pressed" from="Pause/CenterContainer/VBoxContainer/ContinueGameButton" to="Pause" method="_on_ContinueGameButton_pressed"]
 [connection signal="pressed" from="Pause/CenterContainer/VBoxContainer/ReturnButton" to="Pause" method="_on_ReturnButton_pressed"]
 [connection signal="pressed" from="Pause/CenterContainer/VBoxContainer/QuitGameButton" to="Pause" method="_on_QuitGameButton_pressed"]

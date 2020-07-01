@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://GameMenu/WinScreen.gd" type="Script" id=1]
+[ext_resource path="res://Music and Sounds/Menu Select.wav" type="AudioStream" id=2]
 
 [node name="WinScreen" type="CanvasLayer"]
 
@@ -51,5 +52,8 @@ margin_top = 42.0
 margin_right = 57.0
 margin_bottom = 62.0
 text = "Exit"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="WinScreen/CenterContainer/VBoxContainer"]
+stream = ExtResource( 2 )
 [connection signal="pressed" from="WinScreen/CenterContainer/VBoxContainer/RestartButton" to="WinScreen" method="_on_RestartButton_pressed"]
 [connection signal="pressed" from="WinScreen/CenterContainer/VBoxContainer/QuitButton" to="WinScreen" method="_on_QuitButton_pressed"]
