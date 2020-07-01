@@ -23,6 +23,7 @@ export var ROLL_SPEED = 120
 export var FRICTION = 500
 
 func _ready():
+	stats.health = 4
 	stats.connect("no_health",self,"queue_free")
 	animationTree.active = true
 	swordHitbox.knockback_vector = roll_vector
@@ -87,3 +88,5 @@ func _on_Hurtbox_area_entered(area):
 	stats.health -= area.damage
 	hurtbox.start_invincibility(0.5)
 	hurtbox.create_hit_effect()
+	if stats.health == 0:
+		get_tree().reload_current_scene()

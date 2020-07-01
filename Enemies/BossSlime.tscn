@@ -54,6 +54,7 @@ position = Vector2( 1.90735e-06, -32.75 )
 scale = Vector2( 2.9375, 2.6875 )
 frames = SubResource( 5 )
 animation = "Animate"
+frame = 2
 playing = true
 
 [node name="ShadowSprite" type="Sprite" parent="."]
@@ -85,7 +86,7 @@ rotation = 1.5708
 shape = SubResource( 8 )
 
 [node name="Stats" parent="." instance=ExtResource( 5 )]
-max_health = 6
+max_health = 10
 
 [node name="PlayerDetectionZone" parent="." instance=ExtResource( 6 )]
 

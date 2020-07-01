@@ -13,3 +13,8 @@ func _on_ContinueGameButton_pressed():
 func _on_QuitGameButton_pressed():
 	get_tree().paused = false
 	get_tree().quit()
+
+
+func _on_ReturnButton_pressed():
+	get_tree().paused = false
+	get_tree().reload_current_scene()
