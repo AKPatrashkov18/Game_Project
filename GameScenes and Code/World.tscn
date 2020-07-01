@@ -1104,7 +1104,7 @@ position = Vector2( 1712.67, -507.085 )
 position = Vector2( 1637.27, -451.587 )
 
 [node name="BossSlime" parent="YSort/Enemies" instance=ExtResource( 15 )]
-position = Vector2( 237.073, 112.02 )
+position = Vector2( 1684.44, -774.625 )
 
 [node name="WinScreen" parent="YSort/Enemies" instance=ExtResource( 14 )]
 pause_mode = 2
