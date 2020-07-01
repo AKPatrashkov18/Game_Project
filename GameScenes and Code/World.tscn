@@ -686,13 +686,13 @@ position = Vector2( 1129.74, -281.583 )
 position = Vector2( 1577.73, -651.327 )
 
 [node name="Tree_v7" parent="YSort/Trees" instance=ExtResource( 10 )]
-position = Vector2( 1609.69, -651.327 )
+position = Vector2( 1605.72, -657.677 )
 
 [node name="Tree_v8" parent="YSort/Trees" instance=ExtResource( 10 )]
 position = Vector2( 1701.34, -649.645 )
 
 [node name="Tree_v9" parent="YSort/Trees" instance=ExtResource( 10 )]
-position = Vector2( 1676.96, -647.963 )
+position = Vector2( 1680.13, -661.456 )
 
 [node name="Tree_v10" parent="YSort/Trees" instance=ExtResource( 10 )]
 position = Vector2( 1571.98, -622.169 )
@@ -997,16 +997,16 @@ position = Vector2( 1639.24, -588.854 )
 position = Vector2( 1595.14, -562.573 )
 
 [node name="Grass97" parent="YSort/Grass" instance=ExtResource( 8 )]
-position = Vector2( 1660.62, -595.09 )
+position = Vector2( 1657.84, -599.059 )
 
 [node name="Grass98" parent="YSort/Grass" instance=ExtResource( 8 )]
-position = Vector2( 1652.16, -586.627 )
+position = Vector2( 1647.79, -594.167 )
 
 [node name="Grass99" parent="YSort/Grass" instance=ExtResource( 8 )]
-position = Vector2( 1699.82, -591.972 )
+position = Vector2( 1700.61, -604.671 )
 
 [node name="Grass100" parent="YSort/Grass" instance=ExtResource( 8 )]
-position = Vector2( 1713.63, -581.727 )
+position = Vector2( 1711.65, -592.442 )
 
 [node name="Grass101" parent="YSort/Grass" instance=ExtResource( 8 )]
 position = Vector2( 1722.98, -572.372 )
@@ -1032,7 +1032,7 @@ position = Vector2( 338.33, -85.9743 )
 position = Vector2( 354.998, 9.26979 )
 
 [node name="Bat3" parent="YSort/Enemies" instance=ExtResource( 12 )]
-position = Vector2( 236.737, -112.96 )
+position = Vector2( 256.896, -46.1842 )
 
 [node name="Bat4" parent="YSort/Enemies" instance=ExtResource( 12 )]
 position = Vector2( 402.671, -275.526 )
@@ -1068,13 +1068,13 @@ position = Vector2( 1522.27, -431.896 )
 position = Vector2( 1297.65, -284.418 )
 
 [node name="Bat12" parent="YSort/Enemies" instance=ExtResource( 12 )]
-position = Vector2( 1747.42, -469.667 )
+position = Vector2( 1712.67, -507.085 )
 
 [node name="Bat11" parent="YSort/Enemies" instance=ExtResource( 12 )]
 position = Vector2( 1637.27, -451.587 )
 
 [node name="BossSlime" parent="YSort/Enemies" instance=ExtResource( 15 )]
-position = Vector2( 1677.14, -771.687 )
+position = Vector2( 1682.18, -784.286 )
 
 [node name="WinScreen" parent="YSort/Enemies" instance=ExtResource( 14 )]
 pause_mode = 2
