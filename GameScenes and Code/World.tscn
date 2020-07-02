@@ -1113,6 +1113,7 @@ pause_mode = 2
 position = Vector2( 815.973, -493.638 )
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = 0
 
 [node name="HealthUI" parent="CanvasLayer" instance=ExtResource( 9 )]
 margin_left = 5.05769
