@@ -15,7 +15,7 @@ _global_script_class_icons={
 
 [application]
 
-config/name="Project2D"
+config/name="Fox Master"
 run/main_scene="res://GameMenu/StartMenu.tscn"
 config/icon="res://GameMenu/FoxIcon.png"
 

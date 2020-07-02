@@ -88,5 +88,5 @@ func _on_Hurtbox_area_entered(area):
 	stats.health -= area.damage
 	hurtbox.start_invincibility(0.5)
 	hurtbox.create_hit_effect()
-	if stats.health == 0:
+	if stats.health <= 0:
 		get_tree().reload_current_scene()
