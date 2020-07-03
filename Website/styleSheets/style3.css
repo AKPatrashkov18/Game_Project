@@ -1,0 +1,48 @@
+body {
+    background-image: url("../images/cloud.jpg");
+    background-repeat: no-repeat;
+   }
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: rgb(41,41,41);
+    }
+    
+    li {
+      float: left;
+    }
+    
+    li a {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+    li {
+      font-size: 30px;
+      font-family: 'Times New Roman', Times, serif;
+    }
+    
+    li a:hover {
+      background-color: #111; 
+    }
+    p {
+     text-align: center ;
+     color: black;
+     padding: 100px 200px;
+     font-size: x-large;
+     font-family: 'Times New Roman', Times, serif;
+    }
+    label {
+        padding: 1px 550px;
+        font-family: 'Times New Roman', Times, serif;
+        font-size: x-large;
+        color: black;
+    }
+    input {
+        padding: 20px 30px;
+        margin-left: 525px;
+    }
